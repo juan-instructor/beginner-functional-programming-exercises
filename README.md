@@ -157,31 +157,31 @@ console.log(getFirstCountries(countryList, 17));
 # Hard Work Pays off - If you need extra practice (specially to get ready for final exam and final projects)
 
 1. Read chapter 4 and 5 on objects and Arrays. Come to my desk whenever you have questions
-2. Practice in (freecodecamp)[https://www.freecodecamp.org/] - Sign in with your school account
+2. Practice in [freecodecamp](https://www.freecodecamp.org/) - Sign in with your school account
 3. Freecodecamp Exercises Arrays
-   3.1. (arrays push)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-push]
-   3.2. (arrays pop)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-pop]
-   3.3. (arrays shift)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-shift]
-   3.4. (arrays unshift)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-unshift]
-   3.5 (array exercise 1)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/shopping-list]
-   3.6 (nested arrays)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-arrays]
-   3.8 (array destructuring)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-arrays]
-   3.6. (Review JavaScript Scope)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-vs--local-scope-in-functions]
+   3.1. [arrays push](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-push)
+   3.2. [arrays pop](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-pop)
+   3.3. [arrays shift](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-shift)
+   3.4. [arrays unshift](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulate-arrays-with-unshift)
+   3.5 [array exercise 1](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/shopping-list)
+   3.6 [nested arrays](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/accessing-nested-arrays)
+   3.8 [array destructuring](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-arrays)
+   3.6. [Review JavaScript Scope](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/global-vs--local-scope-in-functions)
 
 4. Objects
-   4.1 (Object Lookup)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/using-objects-for-lookups]
-   4.2. (checking objects for properties)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/testing-objects-for-properties]
-   4.3 (manipulating comlex objects)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulating-complex-objects]
-   4.4 (Destructuring)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-nested-objects]
+   4.1 [Object Lookup](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/using-objects-for-lookups)
+   4.2. [checking objects for properties](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/testing-objects-for-properties)
+   4.3 [manipulating comlex objects](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/basic-javascript/manipulating-complex-objects)
+   4.4 [Destructuring](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-destructuring-assignment-to-assign-variables-from-nested-objects)
 
-5. (arrow functions)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-arrow-functions-to-write-concise-anonymous-functions]
-   5.1 (default parameters)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/set-default-parameters-for-your-functions]
+5. [arrow functions](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-arrow-functions-to-write-concise-anonymous-functions)
+   5.1 [default parameters](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/set-default-parameters-for-your-functions)
 
 6. Modules
-   6.1 (Create a module)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/create-a-module-script]
-   6.2 (export)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-export-to-share-a-code-block]
-   6.2. (import)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/reuse-javascript-code-using-import]
-   6.3. (default export)[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/import-a-default-export]
+   6.1 [Create a module](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/create-a-module-script)
+   6.2 [export](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/use-export-to-share-a-code-block)
+   6.2. [import](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/reuse-javascript-code-using-import)
+   6.3. [default export](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/es6/import-a-default-export)
 
 7. Finally, expand your knowledge on functional programming
-   7.1 (complete freecodecamps section 'functional programming')[https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/learn-about-functional-programming]
+   7.1 [complete freecodecamps section 'functional programming'](https://www.freecodecamp.org/learn/javascript-algorithms-and-data-structures/functional-programming/learn-about-functional-programming)
