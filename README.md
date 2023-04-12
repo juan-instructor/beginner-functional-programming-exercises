@@ -154,7 +154,9 @@ console.log(getFirstCountries(countryList, 17));
 ];
 ```
 
-# Hard Work Pays off - If you need extra practice (specially to get ready for final exam and final projects)
+# Hard work pays off
+
+## If you need extra practice (specially to get ready for the final exam and final projects)
 
 1. Read chapter 4 and 5 on objects and Arrays. Come to my desk whenever you have questions
 2. Practice in [freecodecamp](https://www.freecodecamp.org/) - Sign in with your school account
