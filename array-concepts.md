@@ -7,27 +7,7 @@ A new pane will open displaying the contents of this markdown.md file in a more 
 
 <sub>Author:
 <a href="https://github.com/Asabeneh/30-Days-Of-JavaScript/blob/master/09_Day_Higher_order_functions/09_day_higher_order_functions.md#returning-function" target="_blank">Asabeneh Yetayeh</a><br>
-</sub>
-	- [Higher Order Function](#higher-order-function)
-		- [Callback](#callback)
-		- [Returning function](#returning-function)
-	- [Functional Programming](#functional-programming)
-		- [forEach](#foreach)
-		- [map](#map)
-		- [filter](#filter)
-		- [reduce](#reduce)
-		- [every](#every)
-		- [find](#find)
-		- [findIndex](#findindex)
-		- [some](#some)
-		- [sort](#sort)
-			- [Sorting string values](#sorting-string-values)
-			- [Sorting Numeric values](#sorting-numeric-values)
-			- [Sorting Object Arrays](#sorting-object-arrays)
-	- [💻 Exercises](#-exercises)
-		- [Exercises: Level 1](#exercises-level-1)
-		- [Exercises: Level 2](#exercises-level-2)
-		- [Exercises: Level 3](#exercises-level-3)
+</sub> - [Higher Order Function](#higher-order-function) - [Callback](#callback) - [Returning function](#returning-function) - [Functional Programming](#functional-programming) - [forEach](#foreach) - [map](#map) - [filter](#filter) - [reduce](#reduce) - [every](#every) - [find](#find) - [findIndex](#findindex) - [some](#some) - [sort](#sort) - [Sorting string values](#sorting-string-values) - [Sorting Numeric values](#sorting-numeric-values) - [Sorting Object Arrays](#sorting-object-arrays) - [💻 Exercises](#-exercises) - [Exercises: Level 1](#exercises-level-1) - [Exercises: Level 2](#exercises-level-2) - [Exercises: Level 3](#exercises-level-3)
 
 ## Higher Order Function
 
@@ -55,34 +35,34 @@ console.log(cube(callback, 3))
 
 Higher order functions return function as a value
 ​
+
 ```js
 // Higher order function returning an other function
-const higherOrder = n => {
-  const doSomething = m => {
-    const doWhatEver = t => {
-      return 2 * n + 3 * m + t
-    }
-    return doWhatEver
-  }
-  return doSomething
-}
-console.log(higherOrder(2)(3)(10))
+const higherOrder = (n) => {
+    const doSomething = (m) => {
+        const doWhatEver = (t) => {
+            return 2 * n + 3 * m + t;
+        };
+        return doWhatEver;
+    };
+    return doSomething;
+};
+console.log(higherOrder(2)(3)(10));
 ```
 
 Let us see were we use call back functions. For instance the _forEach_ method uses call back.
 
 ```js
-const numbers = [1, 2, 3, 4, 5]
-const sumArray = arr => {
-  let sum = 0
-  const callback = function(element) {
-    sum += element
-  }
-  arr.forEach(callback)
-  return sum
-
-}
-console.log(sumArray(numbers))
+const numbers = [1, 2, 3, 4, 5];
+const sumArray = (arr) => {
+    let sum = 0;
+    const callback = function (element) {
+        sum += element;
+    };
+    arr.forEach(callback);
+    return sum;
+};
+console.log(sumArray(numbers));
 ```
 
 ```sh
@@ -109,8 +89,6 @@ console.log(sumArray(numbers))
 15
 ```
 
-
-
 ## Functional Programming
 
 Instead of writing regular loop, latest version of JavaScript introduced lots of built in methods which can help us to solve complicated problems. All builtin methods take callback function. In this section, we will see _forEach_, _map_, _filter_, _reduce_, _find_, _every_, _some_, and _sort_.
@@ -121,21 +99,21 @@ _forEach_: Iterate an array elements. We use _forEach_ only with arrays. It take
 
 ```js
 arr.forEach(function (element, index, arr) {
-  console.log(index, element, arr)
-})
+    console.log(index, element, arr);
+});
 // The above code can be written using arrow function
 arr.forEach((element, index, arr) => {
-  console.log(index, element, arr)
-})
+    console.log(index, element, arr);
+});
 // The above code can be written using arrow function and explicit return
-arr.forEach((element, index, arr) => console.log(index, element, arr))
+arr.forEach((element, index, arr) => console.log(index, element, arr));
 ```
 
 ```js
 let sum = 0;
 const numbers = [1, 2, 3, 4, 5];
-numbers.forEach(num => console.log(num))
-console.log(sum)
+numbers.forEach((num) => console.log(num));
+console.log(sum);
 ```
 
 ```sh
@@ -149,9 +127,9 @@ console.log(sum)
 ```js
 let sum = 0;
 const numbers = [1, 2, 3, 4, 5];
-numbers.forEach(num => sum += num)
+numbers.forEach((num) => (sum += num));
 
-console.log(sum)
+console.log(sum);
 ```
 
 ```sh
@@ -159,8 +137,8 @@ console.log(sum)
 ```
 
 ```js
-const countries = ['Finland', 'Denmark', 'Sweden', 'Norway', 'Iceland']
-countries.forEach((element) => console.log(element.toUpperCase()))
+const countries = ["Finland", "Denmark", "Sweden", "Norway", "Iceland"];
+countries.forEach((element) => console.log(element.toUpperCase()));
 ```
 
 ```sh
@@ -173,12 +151,12 @@ ICELAND
 
 ### map
 
-_map_: Iterate an array elements and modify the array elements. It takes a callback function with elements,  index , array parameter and return a new array.
+_map_: Iterate an array elements and modify the array elements. It takes a callback function with elements, index , array parameter and return a new array.
 
 ```js
 const modifiedArray = arr.map(function (element, index, arr) {
-  return element
-})
+    return element;
+});
 ```
 
 ```js
@@ -186,10 +164,10 @@ const modifiedArray = arr.map(function (element, index, arr) {
 const modifiedArray = arr.map((element,index) => element);
 */
 //Example
-const numbers = [1, 2, 3, 4, 5]
-const numbersSquare = numbers.map((num) => num * num)
+const numbers = [1, 2, 3, 4, 5];
+const numbersSquare = numbers.map((num) => num * num);
 
-console.log(numbersSquare)
+console.log(numbersSquare);
 ```
 
 ```sh
@@ -197,9 +175,9 @@ console.log(numbersSquare)
 ```
 
 ```js
-const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
-const namesToUpperCase = names.map((name) => name.toUpperCase())
-console.log(namesToUpperCase)
+const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+const namesToUpperCase = names.map((name) => name.toUpperCase());
+console.log(namesToUpperCase);
 ```
 
 ```sh
@@ -208,20 +186,20 @@ console.log(namesToUpperCase)
 
 ```js
 const countries = [
-  'Albania',
-  'Bolivia',
-  'Canada',
-  'Denmark',
-  'Ethiopia',
-  'Finland',
-  'Germany',
-  'Hungary',
-  'Ireland',
-  'Japan',
-  'Kenya',
-]
-const countriesToUpperCase = countries.map((country) => country.toUpperCase())
-console.log(countriesToUpperCase)
+    "Albania",
+    "Bolivia",
+    "Canada",
+    "Denmark",
+    "Ethiopia",
+    "Finland",
+    "Germany",
+    "Hungary",
+    "Ireland",
+    "Japan",
+    "Kenya",
+];
+const countriesToUpperCase = countries.map((country) => country.toUpperCase());
+console.log(countriesToUpperCase);
 
 /*
 // Arrow function
@@ -238,9 +216,7 @@ const countriesToUpperCase = countries.map(country => country.toUpperCase());
 ```
 
 ```js
-const countriesFirstThreeLetters = countries.map((country) =>
-  country.toUpperCase().slice(0, 3)
-)
+const countriesFirstThreeLetters = countries.map((country) => country.toUpperCase().slice(0, 3));
 ```
 
 ```sh
@@ -253,10 +229,8 @@ _Filter_: Filter out items which full fill filtering conditions and return a new
 
 ```js
 //Filter countries containing land
-const countriesContainingLand = countries.filter((country) =>
-  country.includes('land')
-)
-console.log(countriesContainingLand)
+const countriesContainingLand = countries.filter((country) => country.includes("land"));
+console.log(countriesContainingLand);
 ```
 
 ```sh
@@ -264,8 +238,8 @@ console.log(countriesContainingLand)
 ```
 
 ```js
-const countriesEndsByia = countries.filter((country) => country.endsWith('ia'))
-console.log(countriesEndsByia)
+const countriesEndsByia = countries.filter((country) => country.endsWith("ia"));
+console.log(countriesEndsByia);
 ```
 
 ```sh
@@ -273,10 +247,8 @@ console.log(countriesEndsByia)
 ```
 
 ```js
-const countriesHaveFiveLetters = countries.filter(
-  (country) => country.length === 5
-)
-console.log(countriesHaveFiveLetters)
+const countriesHaveFiveLetters = countries.filter((country) => country.length === 5);
+console.log(countriesHaveFiveLetters);
 ```
 
 ```sh
@@ -285,16 +257,16 @@ console.log(countriesHaveFiveLetters)
 
 ```js
 const scores = [
-  { name: 'Asabeneh', score: 95 },
-   { name: 'Lidiya', score: 98 },
-  { name: 'Mathias', score: 80 },
-  { name: 'Elias', score: 50 },
-  { name: 'Martha', score: 85 },
-  { name: 'John', score: 100 },
-]
+    { name: "Asabeneh", score: 95 },
+    { name: "Lidiya", score: 98 },
+    { name: "Mathias", score: 80 },
+    { name: "Elias", score: 50 },
+    { name: "Martha", score: 85 },
+    { name: "John", score: 100 },
+];
 
-const scoresGreaterEighty = scores.filter((score) => score.score > 80)
-console.log(scoresGreaterEighty)
+const scoresGreaterEighty = scores.filter((score) => score.score > 80);
+console.log(scoresGreaterEighty);
 ```
 
 ```sh
@@ -303,24 +275,24 @@ console.log(scoresGreaterEighty)
 
 ### reduce
 
-_reduce_: Reduce takes a callback function. The call back function takes accumulator,  current, and optional initial value as a parameter and returns a single value. It is a good practice to define an initial value for the accumulator value. If we do not specify this parameter, by default accumulator will get array `first value`. If our array is an _empty array_, then `Javascript` will throw an error.
+_reduce_: Reduce takes a callback function. The call back function takes accumulator, current, and optional initial value as a parameter and returns a single value. It is a good practice to define an initial value for the accumulator value. If we do not specify this parameter, by default accumulator will get array `first value`. If our array is an _empty array_, then `Javascript` will throw an error.
 
 ```js
 arr.reduce((acc, cur) => {
-  // some operations goes here before returning a value
- return 
-}, initialValue)
+    // some operations goes here before returning a value
+    return;
+}, initialValue);
 ```
 
 ```js
-const numbers = [1, 2, 3, 4, 5]
-const sum = numbers.reduce((acc, cur) => acc + cur, 0)
+const numbers = [1, 2, 3, 4, 5];
+const sum = numbers.reduce((acc, cur) => acc + cur, 0);
 
-console.log(sum)
+console.log(sum);
 ```
 
 ```js
-15
+15;
 ```
 
 ### every
@@ -328,10 +300,10 @@ console.log(sum)
 _every_: Check if all the elements are similar in one aspect. It returns boolean
 
 ```js
-const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
-const areAllStr = names.every((name) => typeof name === 'string') // Are all strings?
+const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+const areAllStr = names.every((name) => typeof name === "string"); // Are all strings?
 
-console.log(areAllStr)
+console.log(areAllStr);
 ```
 
 ```sh
@@ -339,10 +311,10 @@ true
 ```
 
 ```js
-const bools = [true, true, true, true]
-const areAllTrue = bools.every((b) => b === true) // Are all true? 
+const bools = [true, true, true, true];
+const areAllTrue = bools.every((b) => b === true); // Are all true?
 
-console.log(areAllTrue) // true
+console.log(areAllTrue); // true
 ```
 
 ```sh
@@ -355,20 +327,20 @@ true
 _find_: Return the first element which satisfies the condition
 
 ```js
-const ages = [24, 22, 25, 32, 35, 18]
-const age = ages.find((age) => age < 20)
+const ages = [24, 22, 25, 32, 35, 18];
+const age = ages.find((age) => age < 20);
 
-console.log(age)
+console.log(age);
 ```
 
 ```js
-18
+18;
 ```
 
 ```js
-const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
-const result = names.find((name) => name.length > 7)
-console.log(result)
+const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+const result = names.find((name) => name.length > 7);
+console.log(result);
 ```
 
 ```sh
@@ -377,15 +349,15 @@ Asabeneh
 
 ```js
 const scores = [
-  { name: 'Asabeneh', score: 95 },
-  { name: 'Mathias', score: 80 },
-  { name: 'Elias', score: 50 },
-  { name: 'Martha', score: 85 },
-  { name: 'John', score: 100 },
-]
+    { name: "Asabeneh", score: 95 },
+    { name: "Mathias", score: 80 },
+    { name: "Elias", score: 50 },
+    { name: "Martha", score: 85 },
+    { name: "John", score: 100 },
+];
 
-const score = scores.find((user) => user.score > 80)
-console.log(score)
+const score = scores.find((user) => user.score > 80);
+console.log(score);
 ```
 
 ```sh
@@ -397,14 +369,14 @@ console.log(score)
 _findIndex_: Return the position of the first element which satisfies the condition
 
 ```js
-const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
-const ages = [24, 22, 25, 32, 35, 18]
+const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+const ages = [24, 22, 25, 32, 35, 18];
 
-const result = names.findIndex((name) => name.length > 7)
-console.log(result) // 0
+const result = names.findIndex((name) => name.length > 7);
+console.log(result); // 0
 
-const age = ages.findIndex((age) => age < 20)
-console.log(age) // 5
+const age = ages.findIndex((age) => age < 20);
+console.log(age); // 5
 ```
 
 ### some
@@ -412,17 +384,17 @@ console.log(age) // 5
 _some_: Check if some of the elements are similar in one aspect. It returns boolean
 
 ```js
-const names = ['Asabeneh', 'Mathias', 'Elias', 'Brook']
-const bools = [true, true, true, true]
+const names = ["Asabeneh", "Mathias", "Elias", "Brook"];
+const bools = [true, true, true, true];
 
-const areSomeTrue = bools.some((b) =>  b === true)
+const areSomeTrue = bools.some((b) => b === true);
 
-console.log(areSomeTrue) //true
+console.log(areSomeTrue); //true
 ```
 
 ```js
-const areAllStr = names.some((name) => typeof name === 'number') // Are all strings ?
-console.log(areAllStr) // false
+const areAllStr = names.some((name) => typeof name === "number"); // Are all strings ?
+console.log(areAllStr); // false
 ```
 
 ### sort
@@ -432,8 +404,8 @@ _sort_: The sort methods arranges the array elements either ascending or descend
 #### Sorting string values
 
 ```js
-const products = ['Milk', 'Coffee', 'Sugar', 'Honey', 'Apple', 'Carrot']
-console.log(products.sort()) // ['Apple', 'Carrot', 'Coffee', 'Honey', 'Milk', 'Sugar']
+const products = ["Milk", "Coffee", "Sugar", "Honey", "Apple", "Carrot"];
+console.log(products.sort()); // ['Apple', 'Carrot', 'Coffee', 'Honey', 'Milk', 'Sugar']
 //Now the original products array  is also sorted
 ```
 
@@ -442,19 +414,19 @@ console.log(products.sort()) // ['Apple', 'Carrot', 'Coffee', 'Honey', 'Milk', '
 As you can see in the example below, 100 came first after sorted in ascending order. Sort converts items to string , since '100' and other numbers compared, 1 which the beginning of the string '100' became the smallest. To avoid this, we use a compare call back function inside the sort method, which return a negative, zero or positive.
 
 ```js
-const numbers = [9.81, 3.14, 100, 37]
+const numbers = [9.81, 3.14, 100, 37];
 // Using sort method to sort number items provide a wrong result. see below
-console.log(numbers.sort()) //[100, 3.14, 37, 9.81]
+console.log(numbers.sort()); //[100, 3.14, 37, 9.81]
 numbers.sort(function (a, b) {
-  return a - b
-})
+    return a - b;
+});
 
-console.log(numbers) // [3.14, 9.81, 37, 100]
+console.log(numbers); // [3.14, 9.81, 37, 100]
 
 numbers.sort(function (a, b) {
-  return b - a
-})
-console.log(numbers) //[100, 37, 9.81, 3.14]
+    return b - a;
+});
+console.log(numbers); //[100, 37, 9.81, 3.14]
 ```
 
 #### Sorting Object Arrays
@@ -463,31 +435,31 @@ Whenever we sort objects in an array, we use the object key to compare. Let us s
 
 ```js
 objArr.sort(function (a, b) {
-  if (a.key < b.key) return -1
-  if (a.key > b.key) return 1
-  return 0
-})
+    if (a.key < b.key) return -1;
+    if (a.key > b.key) return 1;
+    return 0;
+});
 
 // or
 
 objArr.sort(function (a, b) {
-  if (a['key'] < b['key']) return -1
-  if (a['key'] > b['key']) return 1
-  return 0
-})
+    if (a["key"] < b["key"]) return -1;
+    if (a["key"] > b["key"]) return 1;
+    return 0;
+});
 
 const users = [
-  { name: 'Asabeneh', age: 150 },
-  { name: 'Brook', age: 50 },
-  { name: 'Eyob', age: 100 },
-  { name: 'Elias', age: 22 },
-]
+    { name: "Asabeneh", age: 150 },
+    { name: "Brook", age: 50 },
+    { name: "Eyob", age: 100 },
+    { name: "Elias", age: 22 },
+];
 users.sort((a, b) => {
-  if (a.age < b.age) return -1
-  if (a.age > b.age) return 1
-  return 0
-})
-console.log(users) // sorted ascending
+    if (a.age < b.age) return -1;
+    if (a.age > b.age) return 1;
+    return 0;
+});
+console.log(users); // sorted ascending
 // [{…}, {…}, {…}, {…}]
 ```
 
